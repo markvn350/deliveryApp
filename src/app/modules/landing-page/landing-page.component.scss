@@ -1,0 +1,62 @@
+@use "../../../mixsin.scss" as m;
+@use "../../../variables.scss" as v;
+
+.formulario{
+
+    &__grid{
+        @include m.tablet{
+            @include m.grid(2, 3.5rem)
+        }
+    }
+
+    &__heading{
+        color: v.$blanco;
+        text-align: center;
+    }
+
+
+    &__contenido{
+        background-color: v.$primario;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-bottom: 3rem;
+    }
+
+    &__label{
+        color: v.$blanco;
+        text-transform: uppercase;
+        display: block;
+        margin: 0.6rem 0;
+    }
+
+   
+
+    &__input{
+        width: 100%;
+        display: block;
+        padding: 0.8rem;
+        border: none
+    }
+
+    &__boton{
+        @include m.boton(v.$secundario, v.$blanco);
+        padding: 0.8 1.5rem;
+        margin: 1.2rem 0;
+    }
+
+    &__imagen{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img{
+        width: 20rem;
+        @include m.desktop{
+            width: 90%;
+        }
+    }
+
+   
+}

@@ -1,0 +1,59 @@
+@use "../../../../mixsin.scss" as m;
+@use "../../../../variables.scss" as v;
+
+
+.repartidores{
+    width: 100%;
+    padding: 3.5rem;
+    
+    &__heading{
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    &__imagen{
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    &__img{
+        width: 100%;
+    }
+    
+    &__contenido{
+        flex-grow: 1;
+        line-height: 1.5;
+        font-size: 1.2rem;
+    }
+
+    &__grid{
+
+        @include m.tablet{
+            @include m.grid(2, 3rem)
+        }
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    &__enlace{
+        @include m.boton(v.$primario , v.$blanco);
+        @include m.tablet{
+            max-width: 75%;
+            margin-top: 1rem;
+        }
+        @include m.desktop{
+            width: auto;
+            max-width: 40%;
+        }
+
+    }
+
+    &__textoCont{
+        @include m.tablet{
+            max-height: 19rem;
+            overflow: hidden;
+        }
+       
+    }
+}

@@ -1,0 +1,100 @@
+@use "../../../../mixsin.scss" as m;
+@use "../../../../variables.scss" as v;
+
+
+.favoritos{
+    width: 100%;
+    background-color: v.$grisClaro;
+    padding: 1rem;
+    @include m.tablet{
+        padding: 2rem;
+    }
+
+    &__heading{
+        text-align: center;
+        color: v.$secundario;
+    }
+
+    &__grid{
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: 900px){
+            @include m.grid(2, 2rem);
+            flex-grow: 1;
+            flex: 1;
+        }
+        
+    }
+}
+
+.favorito{
+    width: 100%;
+    background-color: v.$blanco;
+    margin: 1rem auto ;
+    padding: 2rem 1.5rem;
+    box-shadow: 0px 0px 2rem -0.8rem;
+    border-radius: 0.6rem;
+
+    &__grid{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include m.tablet{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 2.5rem;
+        }
+       
+        
+    }
+
+    &__imagen{
+        width: 100%;
+       margin: 0 auto;
+    }
+
+    &__img{
+        max-width:30%;
+        min-width: 8rem;
+        margin: 0 auto !important;
+        display: block;
+    }
+
+    @include m.desktop{
+        margin: 0%;
+        
+    }
+
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    &__nombre{
+        color: v.$primario;
+        margin: 1.5rem 0% ;
+        
+        text-align: center;
+        @include m.tablet{
+            text-align: left;
+        }
+        
+    }
+
+    &__estrellas{
+        max-width: 50%;
+        padding-top: 1rem;
+        margin: 0 auto;
+        @include m.tablet{
+           margin: 0%;
+        }
+    }
+}

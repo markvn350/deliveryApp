@@ -1,0 +1,60 @@
+@use "../../../../mixsin.scss" as m;
+@use "../../../../variables.scss" as v;
+
+
+.footer{
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding: 3rem;
+    background-color: v.$secundario;
+
+    &__grid{
+        @include m.tablet{
+            @include m.grid(3, 2rem);
+            justify-content: center;
+        }
+    }
+
+    &__nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading{
+        color: v.$blanco;
+        font-size: 1.8rem;
+        font-weight: 700;
+        
+        margin: 1rem 0;
+    }
+
+    &__texto{
+        color: v.$blanco;
+        line-height: 1.8;
+        text-align: justify;
+        @include m.tablet{
+            text-align: left;
+        }
+    }
+
+    &__link{
+        color: v.$blanco;
+        line-height: 1.7;
+    }
+
+    &__copyright{
+        background-color: v.$primario;
+        color: v.$blanco;
+        margin: 0px auto;
+        text-align: center;
+        padding: 0.5rem;
+        
+    }
+
+   &__widget{
+        text-align: center;
+        @include m.tablet{
+            text-align: left;
+        }
+   }
+}

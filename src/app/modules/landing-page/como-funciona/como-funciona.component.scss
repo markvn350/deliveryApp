@@ -1,0 +1,51 @@
+@use "../../../../mixsin.scss" as m;
+@use "../../../../variables.scss" as v;
+
+
+.pasos{
+    margin-top: 3.5rem;
+
+
+    &__contenido{
+        background-color: v.$primario;
+        margin-top: -1.8rem;
+        padding: 1rem;
+        
+    }
+
+    &__heading{
+        color: v.$blanco;
+        text-align: center;
+        font-size: 1.8rem;
+        span{
+            display: block;
+            font-size: 1.2rem
+        }
+    }
+
+    &__grid{
+        @include m.tablet{
+            @include m.grid(3, 1rem);
+            flex-grow: 1;
+        }
+
+
+    }
+
+    &__paso{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__imagen{
+        margin: 0 auto;
+        display: block;
+        max-width: 20rem;
+        padding: 0;
+        transition: transform 0.3s;
+        width: 100%;
+        &:hover{
+            transform: rotate(-4deg) scale(1.2);
+        }
+    }
+}
